@@ -1,11 +1,11 @@
 # Site settings
 title: Chris Blog
-SEOTitle: Chris Blog
+SEOTitle: Chris Blog | Java博文专集
 header-img: img/home-bg.jpg
 email: chiuchunkin@gmail.com
-#description: "trybest"
-keyword: ""
-url: "http://prontera.github.io"              # your host, for absolute URL
+description: "世态炎凉也无妨"
+keyword: "SpringCloud, Spring Cloud, Spring Boot, SpringBoot, java, 服务端, 后端, 开发者, 博客, Blog, 招俊坚, 俊坚, prontera, chris, Chirs"
+url: "https://prontera.github.io"
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
@@ -20,9 +20,10 @@ github_username:    prontera
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
+paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: true
+# if you want to customize anchor. check out line:181 of `post.html`
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
@@ -53,12 +54,12 @@ disqus_username: prontera
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Java Developer"
+sidebar-about-description: "A Java Developer"
 sidebar-avatar: /img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 # Friends
 friends: []
