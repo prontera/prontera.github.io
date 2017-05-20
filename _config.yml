@@ -62,4 +62,9 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 # Friends
-friends: []
+friends: [
+  {
+    title: "SAMZONG",
+    href: "https://samzong.me/"
+  }
+]
