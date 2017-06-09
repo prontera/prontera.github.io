@@ -111,6 +111,15 @@ spring:
         max-attempts: 5
 ```
 
+总结如下：
+
+- spring.listener.retry.enabled=false
+  - 抛出其他异常，无限重试。
+  - 抛出AmqpRejectAndDontRequeueException，即刻reject该消息，有死信队列则会被放置其中。
+- spring.listener.retry.enabled=true
+  - 抛出其他异常，直至spring.rabbitmq.listener.retry.max-attempts的最大上限之后则不再尝试，有死信队列则会被放置其中。
+  - 抛出AmqpRejectAndDontRequeueException，此时不会像`false`一样即刻返回，因为重试机制被打开，所以他的行为如其他普通的异常处理一样，重试达到最大值，有死信队列则会被放置其中。
+
 ### 死信队列
 
 ```java
