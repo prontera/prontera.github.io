@@ -10,6 +10,7 @@ baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
 RSS: false
+mail_username:    chiuchunkin@gmail.com
 #weibo_username:     huxpro
 #zhihu_username:     huxpro
 github_username:    prontera
