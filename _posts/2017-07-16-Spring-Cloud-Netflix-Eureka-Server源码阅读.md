@@ -1,11 +1,12 @@
 ---
 layout:     post
 title:      "Spring Cloud Netflix - Eureka Server源码阅读"
-subtitle:   "Netflix Eureka for Spring Cloud"
+subtitle:   "Understanding Eureka Peer to Peer communication"
 author:     "Chris"
 header-img: "img/post-bg-6.jpg"
 tags:
     - Spring Cloud
+    - 源码研读
 ---
 
 ![](http://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/images/aws_regions.png)
