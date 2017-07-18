@@ -22,13 +22,26 @@ AbstractQueuedSynchronizer中的队列有两种
 
 以下我们就开始通过源码分析层层深入地学习AQS中最重要的数据结构之一 — 同步队列 Sync Queue。
 
+## AQS状态一览
+
+```java
+/** waitStatus value to indicate thread has cancelled */
+static final int CANCELLED =  1;
+/** waitStatus value to indicate successor's thread needs unparking */
+static final int SIGNAL    = -1;
+/** waitStatus value to indicate thread is waiting on condition */
+static final int CONDITION = -2;
+/** waitStatus value to indicate the next acquireShared should unconditionally propagate */
+static final int PROPAGATE = -3;
+```
+
 ## AQS状态转换函数
 
-- shouldParkAfterFailedAcquire(): <=0 —> signal
-- cancelAcquire(): <=0->signal, all —> cancelled
-- unparkSuccessor(): \<0 —> 0
+- shouldParkAfterFailedAcquire(): x<=0 —> signal
+- cancelAcquire(): x<=0 —> signal, all —> cancelled
+- unparkSuccessor(): x\<0 —> 0
 - doReleaseShared(): signal —> 0, 0 —> propagate
-- transferForSignal(): <=0 —> signal, condition —> 0
+- transferForSignal(): x<=0 —> signal, condition —> 0
 - fullyRelease(): all —> cancelled
 - transferAfterCancelledWait(): condition —> 0
 - addConditionWaiter(): 初始化Node为condition
