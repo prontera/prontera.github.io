@@ -9,8 +9,6 @@ tags:
     - 源码研读
 ---
 
-# 百度 - DLock源码解析
-
 ## 简介
 
 [DLock](https://github.com/baidu/dlock)是由Java实现的，一套高效高可靠的分布式锁方案。 使用Redis存储锁，通过[Lua]([https://en.wikipedia.org/wiki/Lua_(programming_language))脚本进行原子性锁操作，实现了基于Redis过期机制的[lease]([https://en.wikipedia.org/wiki/Lease_(computer_science))，并提供了一种基于变种CLH队列的进程级锁竞争模型。
