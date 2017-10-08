@@ -311,7 +311,7 @@ public class DLockEntity implements Serializable, Cloneable {
 
 此类为DLock组件的核心部分，与AQS一样使用了无锁的抢夺方式。
 
-其中字段的含义如下
+其中字段的含义如下 
 
 ```java
     /**
